@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <script src="goats.js" ></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+<style>
+.centering {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 97vh;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    width: 840px; 
+}
+.frame {
+    transition: transform 0.5s;
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    position: relative;
+}
+
+.frame p {
+    padding:100px;
+    box-sizing:border-box;
+}
+
+.fontdiner-swanky-regular {
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 1.5rem;
+
+}
+
+
+</style>
+<body>
+
+<div class = "fontdiner-swanky-regular">
+    <div class = "centering">
+        <div class = "layout">
+
+            <div class = "frame">
+                <p id="a"style="background-color: #2b2d42; color: white;width: 400px; height: 200px; border-radius: 20px;">Who is Svetlana?</p>
+            </div>
+
+            <div class = "frame">
+                <p id="b"style = "background-color: #ef233c; color: white;width: 400px; height: 200px; border-radius: 20px;">Her records</p>
+            </div>
+
+            <div class = "frame">
+                <p id="c"style = "background-color: #edf2f4; color: white; width: 400px; height: 200px; border-radius: 20px;">How good was she?</p>
+            </div>
+
+            <div class = "frame">
+                <p id = "d"style = "background-color: #8d99ae; color: white;width: 400px; height: 200px; border-radius: 20px;">Timeline of her career</p>
+            </div>
+
+    
+        </div>
+    </div>
+        <span id = "e" style = "color:black;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+</body>
+<script>
+     document.getElementById("e").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/goats.html";
+  };
+  document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana.html";
+  };
+  document.getElementById("b").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-records.html";
+  };
+  document.getElementById("c").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-records2.html";
+  };
+  document.getElementById("d").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-timeline.html";
+  };
+</script>
+</html>

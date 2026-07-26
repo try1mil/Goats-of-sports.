@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+<title>Svetlana's Records</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+body, html {
+    background-color : darkblue;
+}
+
+.fontdiner-swanky-regular {
+font-family: "Fontdiner Swanky", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.5rem;
+}
+
+.championship {
+    background-color:red;
+    border:1px solid red;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name: championship;
+    animation-fill-mode: forwards;
+
+}
+
+.img {
+    width:auto;
+    height:400px;
+    border: 10px solid white;
+    border-radius:20px;
+    margin-top:0px;
+}
+
+.european {
+    background-color:red;
+    border:1px solid red;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name: european;
+    animation-fill-mode: forwards;
+}
+
+.olympic {
+    background-color:red;
+    border:1px  red;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name:olympic;
+    animation-fill-mode:forwards;
+}
+
+.goodwill {
+    background-color:red;
+    border:1px  red;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name:goodwill;
+    animation-fill-mode:forwards;
+}
+
+@keyframes championship {
+    0% {
+        transform : scale(1,1);
+    }
+    100% {
+        transform: scale(80,1);
+    }
+}
+
+@keyframes european {
+    0% {
+        transform : scale(1,1);
+    }
+    100% {
+        transform:scale(36,1);
+    }
+}
+
+@keyframes olympic {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform:scale(27,1);
+    }
+}
+
+@keyframes goodwill {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform:scale(20,1);
+    }
+}
+
+
+
+</style>
+
+<body>
+<div class = "fontdiner-swanky-regular">
+    <div>
+        <p style = "text-align:center;">-the following records refer to the time period during which this project was created-</p>
+        <h1 style = "color:white;">World Championship Medals</h1>
+        <div class ="championship"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">20</p>
+        <h1 style = "color:white;">European Championship Medals</h1>
+        <div class ="european"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">13</p>
+        <h1 style = "color:white;">Olympic Medals</h1>
+        <div class = "olympic"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">7</p>
+        <h1 style = "color:white;">Goodwill Medals</h1>
+        <div class = "goodwill"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">4</p>
+    </div>
+
+    <h1 style = "color:rgb(255, 255, 255);text-align:center;">Medals</h1>
+    <h2 style = "color:rgb(177, 32, 32);text-align:center;">- Solo -</h2>
+
+    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/74/5a/c9/745ac9cbc2fd07465b8bc9536316bf37.jpg" 
+        class = "img">
+        <figcaption style = "color:rgb(177, 32, 32);text-align:center;margin-top:10px;font-weight:bold;">20 Gold Medals</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/a8/c9/9f/a8c99f08885b3637c7d5fc90c843b95f.jpg" class = "img" style = "left:100px">
+        <figcaption style = "color:rgb(177, 32, 32);text-align: center;margin-top:10px;font-weight:bold">16 Silver Medals</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/b7/fd/29/b7fd29ea2d02618b2b97473ca6afa25b.jpg" class ="img">
+        <figcaption style = "color:rgb(177, 32, 32);text-align:center;margin-top:10px;font-weight:bold;">4 Bronze Medals</figcaption>
+    </figure>
+
+</div>
+
+<h3 style = color:rgb(177,32,32);text-align:center;">It all adds up to 40 medals in total.</h3>
+
+<h2 style = "color:rgb(118, 118, 160);text-align:center;margin-top:200px;"> - with team -</h1>
+
+<div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/5d/5f/a7/5d5fa79e3f02bc35da995ee4f4040d26.jpg" class = "img" >
+        <figcaption style = "color:rgb(118, 118, 160);text-align:center;justify-content:center;margin-top:10px;font-weight:bold;">3 Silver Medals and one Bronze</figcaption>
+    </figure>
+
+
+</div>
+<h3 style = "color:black;text-align:center;">It adds up to 4 medals in total.</h3>
+<span id = "a" style = "color:rgb(0, 0, 0);margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+<script>
+    document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-firstpage.html";
+  };
+</script>
+</body>

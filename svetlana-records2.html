@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+<title>How good was Svetlana?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+<style>
+body, html {
+    background-color:blue;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.fontdiner-swanky-regular {
+font-family: "Fontdiner Swanky", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.5rem;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.frame {
+    min-width: 100%;
+    width: 100%;
+    background-color: #3030ff;
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+    font-weight:bold;
+    font-size:100px;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.span {
+    transition:transform 0.2s;
+    transform:scale(1)
+}
+.span:hover {
+    transform: scale(1.2);
+
+}      
+
+.slide {
+    text-align: center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="fontdiner-swanky-regular">
+        <p style="color:white; text-align:center; font-size:70px; font-weight:bold;">How good was Svetlana?</p>
+        
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="frame">
+                    <p>At the World championships in Ghent (November 28 – December 4 2001) Khorkina was the most successful competitor out of 440 participants (both men and women). She won three gold medals (All-around, Uneven Bars and Vault), one silver medal (Team event) and one bronze medal (on Floor).  </p>
+                    <p>In total, she earned two Olympic gold medals (uneven bars 1996-2000), four silver (adding all around silver in 2004) and one bronze (team 2004), as well as a total of 20 medals during the World Championships, nine of which were gold (3x all around, 5x u-bars, 1x vault). </p>
+                    
+                    <p>The only title that she missed out on was the Olympic all-around title in Sydney 2000. Her dramatic fall on what was called “her” apparatus, the U-bars, during the all-around competition in Sydney was due to, as said by many people, the wrong setting of the vault, which was her previous apparatus in this event, affecting her performance. </p>
+             
+                </div>
+
+                <div class="frame">
+                    <p style = "padding-top:110px;;">Even then Svetlana was in the focus of attention more than anyone. Two days later, she came back as 'the real Khorkina' and won her second Olympic title on the U-bars after having generously given away her place in the vault final to her younger team-mate Elena Zamolodchikova. The latter not only won the title on the vault, but also the floor, leaving second place to no one else but Khorkina. </p>  
+                </div>
+
+                <div class="frame">
+                    <p style = "padding:20px;">It seems that Khorkina ‘feels’ the bars more than anybody in the world. She has a continuous rhythm when performing on the apparatus and an extremely elegant style of performance. Her performances seem fluent and effortless. Some people say she is “like a cat” when it comes to her routine. At the same time she performs gymnastic elements of extreme difficulty, and adds new original elements of her own. There are no leftover moments in her routine, which is not the case with the majority of gymnasts.</p>
+
+                    <p>Her unique style and presence on the bars puts her on a distinct league of her own, one unreached by any other gymnast in the history of the sport.</p>
+                    
+                    <p>What marks Khorkina’s overwhelming success in the sport is due to the fact that eight different gymnastic moves have been named after her – something unprecedented in the history of gymnastics.</p>                 
+          
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="arrow" id="nextarrow" style = "cursor: pointer;font-family:'BANGERS'">&#8250;</span>
+        </div>
+    </div>
+
+
+<span id ="a" style = "color:white;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('sliderTrack');
+        const arrow = document.getElementById('nextarrow');
+
+        arrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+        document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-firstpage.html";
+  };
+    </script>
+</body>
+</html>
