@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+<title>Micheal's Records</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+body, html {
+    background-color : red;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1.5rem;
+}
+
+.races {
+    background-color:#FFC814;
+    border:1px solid #FFC814;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name: races;
+    animation-fill-mode: forwards;
+
+}
+
+.img {
+    width:auto;
+    height:400px;
+    border: 10px solid white;
+    border-radius:20px;
+    margin-top:0px;
+}
+
+
+
+.pole-positions {
+    background-color:#FFC814;
+    border:1px  #FFC814;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name:pole-positions;
+    animation-fill-mode:forwards;
+}
+
+.championships {
+    background-color:#FFC814;
+    border:1px  #FFC814;
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name:championships;
+    animation-fill-mode:forwards;
+}
+
+@keyframes races {
+    0% {
+        transform : scale(1,1);
+    }
+    100% {
+        transform: scale(130,1);
+    }
+}
+
+@keyframes pole-positions {
+    0% {
+        transform : scale(1,1);
+    }
+    100% {
+        transform:scale(42,1);
+    }
+}
+
+@keyframes championships {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform:scale(17,1);
+    }
+}
+
+
+
+
+</style>
+
+<body>
+<div class = "rubik-mono-one-regular">
+    <div>
+        <h1 style = "color:white;">Races</h1>
+        <div class ="races"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">308</p>
+        <h1 style = "color:white;">Pole positions</h1>
+        <div class ="pole-positions"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">68</p>
+        <h1 style = "color:white;">Championships</h1>
+        <div class = "championships"></div>
+        <p style = "color:white;font-weight:bold;font-size:40px;">7</p>
+    </div>
+
+    <h1 style = "color:rgb(255, 255, 255);text-align:center;">Positions</h1>
+
+    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/0d/92/fe/0d92fe64e6adeb6da33abbfa9237c86e.jpg" 
+        class = "img">
+        <figcaption style = "color:rgb(177, 32, 32);text-align:center;margin-top:10px;font-weight:bold;">91 P1 (1st place)</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/40/2c/95/402c95ab638b76af2fe673f2cf923fa6.jpg" class = "img" style = "left:100px">
+        <figcaption style = "color:rgb(177, 32, 32);text-align: center;margin-top:10px;font-weight:bold">42 P2 (2nd place)</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/06/38/df/0638dfa5468136cb54cff8933f81e075.jpg" class ="img">
+        <figcaption style = "color:rgb(177, 32, 32);text-align:center;margin-top:10px;font-weight:bold;">21 P3 (3rd place)</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/ce/c0/97/cec097e2bfb97b3dd157029936d9fca1.jpg" class ="img">
+        <figcaption style = "color:rgb(177, 32, 32);text-align:center;margin-top:10px;font-weight:bold;">7 F1 World Championships</figcaption>
+    </figure>
+
+</div>
+<h3 style = color:#FFC814;text-align:center;">It all adds up to 152 podiums and 7 World Championships in total.</h3>
+
+<span id = "a" style = "color:yellow;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+<script>
+    document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-firstpage.html";
+  };
+</script>
+</body>

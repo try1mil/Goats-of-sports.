@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <script src="goats.js" ></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+.centering {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 97vh;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    width: 840px; 
+}
+.frame {
+    transition: transform 0.5s;
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    position: relative;
+}
+
+.frame p {
+    padding:100px;
+    box-sizing:border-box;
+}
+
+
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1.5rem;
+}
+
+</style>
+<body>
+<div class = "rubik-mono-one-regular">
+    <div class = "centering">
+        <div class = "layout">
+
+            <div class = "frame">
+                <p id="a"style="background-color: rgb(29, 22, 22); color: white;width: 400px; height: 200px; border-radius: 20px;">Who is Micheal?</p>
+            </div>
+
+            <div class = "frame">
+                <p id="b"style = "background-color: rgb(142, 22, 22); color: white;width: 400px; height: 200px; border-radius: 20px;">His records</p>
+            </div>
+
+            <div class = "frame">
+                <p id="c"style = "background-color: rgb(255, 38, 38); color: white; width: 400px; height: 200px; border-radius: 20px;">How good was he?</p>
+            </div>
+
+            <div class = "frame">
+                <p id = "d"style = "background-color: rgb(238, 238, 238); color: white;width: 400px; height: 200px; border-radius: 20px;">Timeline of his career</p>
+            </div>
+
+    
+        </div>
+    </div>
+        <span id = "e" style = "color:black;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+</body>
+<script>
+    document.getElementById("e").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/goats.html";
+  };
+  document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal.html";
+  };
+  document.getElementById("b").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-records.html";
+  };
+  document.getElementById("c").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-records2.html";
+  };
+  document.getElementById("d").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-timeline.html";
+  };
+</script>
+</html>

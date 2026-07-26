@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+<title>How good was Micheal?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+body, html {
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1.5rem;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.frame {
+    min-width: 100%;
+    width: 100%;
+    background-color: rgb(177, 19, 19);
+    color: #FFC814;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #FFC814;
+    transition: transform 0.2s;
+    font-weight:bold;
+    font-size:100px;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.span {
+    transition:transform 0.2s;
+    transform:scale(1)
+}
+
+.span:hover {
+    transform: scale(1.2);
+
+}      
+
+.slide {
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+    <div class="rubik-mono-one-regular">
+        <p style="color:#FFC814; text-align:center; font-size:70px; font-weight:bold;">How good was Micheal?</p>
+        
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="frame">
+                    <p>Since the Formula 1 World Drivers' Championship began in 1950 the title has been won by 34 different drivers, 16 of who won more than one championship.</p>
+
+                    <p>Seven times a champion, Michael Schumacher also holds nearly every scoring record in the book by a considerable margin. Though his ethics were sometimes questioned, as was his decision to make a comeback after retiring, his sheer dominance when in his prime is beyond doubt...</p>
+
+                    <p>Blessed with a supreme natural talent honed to the highest degree, he had a racing brain to match and spare mental capacity that enabled him to make split-second decisions, adapt to changing circumstances and plan ahead while driving on the limit, which with his superb state of fitness (he trained harder than any driver) he could do consistently for lengthy periods of time. </p>
+                </div>
+
+                <div class="frame">
+                    <p style = "padding-top:110px;">The smoothly swift and mechanically-aware driver operated with a keen sensitivity for the limits of his car and himself (he seldom made mistakes) and his feedback to the engineers (led by technical director Ross Brawn who worked with him throughout his career) was invariably astute.</p>
+
+                    <p>No Ferrari driver worked harder for the team, nor were any of them more appreciated than the German who led the Italian team to six successive Constructors' Championships. </p>
+                </div>
+                
+                <div class="frame">
+                    <p style = "padding:32px;">After finishing second in the 2006 championship, the aging superstar was still at the peak of his powers, having won seven races to bring his total to 91 (40 more than his nearest rival, Alain Prost.) No champion had been so superior for so long, but Schumi had grown tired of the effort required to continue to excel and decided to hang up his helmet.</p>
+
+                    <p>Micheal did not just miraculously give Ferrari, a dying team at the time, their best seasons yet, he made his F1 legacy their own, in many ways Micheal, Ferrari's forever number one, made Ferrari.</p>
+
+                    <p>He is the greatest for a reason.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="arrow" id="nextarrow" style = "cursor: pointer;font-family:'BANGERS'">&#8250;</span>
+        </div>
+    </div>
+
+
+<span id ="a" style = "color:#FFC814;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('sliderTrack');
+        const arrow = document.getElementById('nextarrow');
+
+        arrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+     document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-firstpage.html";
+  };
+    </script>
+</body>
+</html>
