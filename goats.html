@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+    <title>Goats</title>
+    <script src="goats.js" ></script>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
+    
+<style>
+    .bitcount-grid-double-font {
+        font-family: "Bitcount Grid Double", system-ui;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .bitcount-single-font {
+        font-family: "Bitcount Single", system-ui;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    
+    .cinzel-font {
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        text-align:center;
+    }
+
+    .rubik-mono-one-regular {
+        font-family: "Rubik Mono One", monospace;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+        .fontdiner-swanky-regular {
+            font-family: "Fontdiner Swanky", serif;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .Messi {
+            transition: transform 0.5s;
+            transform: scale(1);
+        }
+
+        .Messi:hover {
+            transform: scale(1.2);
+        }
+
+        .Alexa {
+            transition: transform 0.5s;
+            transform: scale(1);
+        }
+
+        .Alexa:hover {
+            transform: scale(1.2);
+        }
+
+        .Micheal {
+            transition: transform 0.5s;
+            transform: scale(1);
+        }
+
+        .Micheal:hover {
+            transform: scale(1.2);
+        }
+
+        .Svetlana {
+            transition: transform 0.5s;
+            transform: scale(1);
+        }
+
+        .Svetlana:hover {
+            transform: scale(1.2);
+        }
+
+        .Messi p {
+            margin-top: 15px;
+        }
+
+        .Alexa p {
+            margin-top: 15px;
+        }
+
+        .Micheal p {
+            margin-top: 15px;
+        }
+
+        .Svetlana p {
+            margin-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1 class="bitcount-grid-double-font">CHOOSE YOUR GOAT</h1> 
+    
+    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+
+        <div class="bitcount-single-font">
+            <div id = "Messi" class="Messi">
+                <img src="https://i.pinimg.com/736x/9f/6b/49/9f6b49a9224a3d0362fbfba4cdb2723f.jpg" 
+                style="width: 300px; height: auto; border-radius: 20px; margin-top: 80px;cursor:pointer;">
+                <p style = "color: rgb(177, 32, 32);">Messi</p>
+            </div>
+        </div>
+        
+        <div class="cinzel-font">
+            <div id = "Alexandra" class="Alexa">
+                <img src="https://i.pinimg.com/736x/e3/7f/96/e37f96dc342acc527838269d8fc90dbd.jpg" 
+                style="width: 300px; height: auto; border-radius: 20px; margin-top: 80px;cursor:pointer;">
+                <p style = "color:rgb(92, 13, 13);">Alexa</p>
+            </div>
+        </div>
+
+        <div class="rubik-mono-one-regular">
+            <div id = "Micheal" class="Micheal">
+                <img src="https://i.pinimg.com/736x/4d/93/47/4d9347e3fb77efaa01cb47e1d6b4a2ed.jpg" 
+                style="width: 300px; height: auto; border-radius: 20px; margin-top: 80px;cursor:pointer;">
+                <p>Micheal</p>
+            </div>
+        </div>
+
+        <div class="fontdiner-swanky-regular">
+            <div id = "Svetlana" class="Svetlana">
+                <img src="https://i.pinimg.com/1200x/14/46/89/14468968b9e369d31bc002079399773d.jpg" 
+                style="width: 320px; height: auto; border-radius: 20px; margin-top: 80px;cursor:pointer;">
+                <p style = "color:red;">Svetlana</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    document.getElementById("Messi").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-firstpage.html";
+  };
+  document.getElementById("Alexandra").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-firstpage.html";
+  };
+
+  document.getElementById("Micheal").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/micheal-firstpage.html";
+  };
+  document.getElementById("Svetlana").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/svetlana-firstpage.html";
+  };
+</script>
+</html>
