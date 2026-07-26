@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Alexandra's career timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.media-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-layer.is-hidden {
+    display: none;
+}
+
+.fade-target {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.timeline-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 120px;
+}
+
+.timeline-arrow {
+    position: relative;
+    width: 1000px;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.timeline-arrow::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-top: 6px solid rgb(0, 0, 0);
+    border-right: 6px solid rgb(0, 0, 0);
+    transform: translateY(-50%) rotate(45deg);
+    animation: arrow-journey 14s ease-in-out 1 forwards;
+}
+
+@keyframes arrow-journey {
+    0%   { left: -5px; 
+        }
+    30%  { left: calc(25% - 15px); 
+    }
+    50%  { left: calc(50% - 15px); 
+    }
+    75%  { left: calc(75% - 15px); 
+    }
+    100% { left: calc(100% - 15px); 
+    }
+}
+
+.timeline-label {
+    position: absolute;
+    top: 15px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(92, 13, 13);
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.era-text-container {
+    position: absolute;
+    top: 68%;
+    width: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.era-description {
+    display: none;
+    max-width: 800px;
+    color: rgb(92, 13, 13);
+    margin-bottom:200px;
+}
+
+.era-description.is-active {
+    display: block;
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 50px;
+    color: rgb(92, 13, 13);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+<div class = "cinzel-font">
+    <video id="player" class="media-layer" autoplay muted playsinline  src="alexa1.mp4"></video>
+    <div class="timeline-container">
+        <div class="timeline-arrow">
+            <p class="timeline-label" style="left: 0%;">2016-2018</p>
+            <p class="timeline-label" style="left: 25%;">2019-2020</p>
+            <p class="timeline-label" style="left: 50%;">2021</p>
+            <p class="timeline-label" style="left: 75%;">2022-2023</p>
+            <p class="timeline-label" style="left: 100%;">2023-present</p>
+        </div>
+    </div>
+
+    <div class="era-text-container">
+        <p class="era-description is-active" data-era="2016-2018">
+            Joins the training group of renowned coach Eteri Tutberidze, wins the Junior World Championships,
+            Wins the Junior Grand Prix Final.
+        </p>
+        <p class="era-description" data-era="2019-2020">
+            Wins Skate Canada, Rostelecom Cup, qualifies for the Senior Grand Prix Finale and won bronze,
+            wins bronze at the european championships.
+        </p>
+        <p class="era-description" data-era="2021">
+            Wins bronze in the world championships in Stockholm, wins Skate America and the U.S Classic,
+            therefore establishes herself as one of the world's top senior skaters.
+        </p>
+        <p class="era-description" data-era="2022-2023">
+            Wins the Olympic Silver Medal in women's singles, coming second, despite landing five quadruple jumps
+            in her free skate, a historic achievement and becoming the first woman to land a quad at the olympic games.
+        </p>
+        <p class="era-description" data-era="2023-present">
+            Doesn't participate in competitions anymore, but shows up to domestic events and training sessions.
+        </p>
+    </div>
+</div>
+    <span class="back-btn" id="a">&#8617;</span>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const eras = [
+                { video: "alexa1.mp4", era: "2016-2018" },
+                { video: "alexa2.mp4", era: "2019-2020" },
+                { video: "alexa3.mp4", era: "2021" },
+                { video: "alexa4.mp4", era: "2022-2023" },
+                { video: "alexa5.mp4", era: "2023-present" }
+            ];
+
+            const videoPlayer = document.getElementById("player");
+            const descriptions = document.querySelectorAll(".era-description");
+
+            let currentIndex = 0;
+
+            function showEra(eraName) {
+                descriptions.forEach(el => {
+                    el.classList.toggle("is-active", el.dataset.era === eraName);
+                });
+            }
+
+            function advancePlaylist() {
+                currentIndex++;
+
+                if (currentIndex < eras.length) {
+                    const next = eras[currentIndex];
+                    videoPlayer.src = next.video;
+                    videoPlayer.play();
+                    showEra(next.era);
+                } else {
+                }
+            }
+
+            videoPlayer.addEventListener("ended", advancePlaylist);
+        });
+        document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-firstpage.html";
+  };
+    </script>
+</body>
+</html>

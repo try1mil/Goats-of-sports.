@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+<title>How good was Alexandra?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<style>
+body, html {
+    background-color:rgb(201, 22, 22);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.frame {
+    min-width: 100%;
+    width: 100%;
+    background-color: rgb(221, 33, 33);
+    color: rgb(30, 30, 136);
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(30, 30, 136);
+    transition: transform 0.2s;
+    font-weight:bold;
+    font-size:100px;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.span {
+    transition:transform 0.2s;
+    transform:scale(1)
+}
+.span:hover {
+    transform: scale(1.2);
+
+}      
+
+.slide {
+    text-align: center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="cinzel-font">
+        <p style="color:rgb(30, 30, 136); text-align:center; font-size:70px; font-weight:bold;">How good was Alexandra?</p>
+        
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="frame">
+                    <p>Trusova was among the first female skaters to land multiple quadruple jumps in a single program at the 2018–2019 World Junior Championships. She also became the first woman to land quadruple Lutz, quadruple flip, and quadruple toe loop jumps in international competition. These technical achievements contributed significantly to her recognition within the international figure skating community at an early stage of her career.</p>
+                    <p>Following her success in the junior category, Alexandra Trusova began competing in senior-level international events. During this period, she participated in ISU Grand Prix series and other international competitions. In the 2019–2020 season, she won first place in several Grand Prix events and finished third at the Grand Prix Final. She also won a bronze medal at the European Figure Skating Championships and placed among the top competitors at the Russian National Championships.</p>
+             
+                </div>
+
+                <div class="frame">
+                    <p>In the 2020–2021 season, Trusova continued competing in international events and won a bronze medal at the ISU World Figure Skating Championships. She also earned placements in various international competitions and Grand Prix events that season. The skater, known for programs with high technical difficulty, included multiple quadruple jumps in her free program. With these results, she maintained a top position in international rankings.Trusova continued to place among the top competitors internationally through her technical achievements.</p>  
+                    <p>Alexandra Trusova competed in the women’s singles event at the  representing the Russian Olympic Committee (ROC). She also participated in the team event, earning a bronze medal with ROC. In the individual women’s competition, she won a silver medal. After falling on a triple Axel in the short program and placing fourth, Trusova omitted the triple Axel in the free program and added five quadruple jumps. She successfully completed three of them cleanly, scoring 177.13 points in the free program and a total of 251.73 points, achieving her personal best score. With this result, she finished second in the women’s singles event</p>
+                </div>
+
+                <div class="frame">
+                    <p>The women’s competition at the Olympics, following the team event, attracted international media attention due to a doping case and its subsequent developments. After the free program, Trusova was noted for her emotional reaction and public expression of dissatisfaction with the result. In post-competition statements, she said, “I will never go out on the ice again. Never! I hate it!” and “Everyone has a gold medal! Only I don’t!” Despite this, Trusova attended the medal ceremony following the competition and accepted her silver medal.</p>
+                    <p>Trusova's frustration for the loss of the golden medal is justified, since her coached had promised her a win had she managed to land a triple Axel in the free program, which she did, in addition to five quadruple jumps. But despite her success in landing an exteremly hard move she only won silver, ending her career immediatly after.
+                    However, there's no denying that Alexandra is one of the best, following the event, many thought that Trusova should've won gold, that she has the skill of the best, one that only she doesn't see. </p>
+          
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="arrow" id="nextarrow" style = "cursor: pointer;font-family:'BANGERS'">&#8250;</span>
+        </div>
+    </div>
+
+
+<span id ="a" style = "color:rgb(30, 30, 136);margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('sliderTrack');
+        const arrow = document.getElementById('nextarrow');
+
+        arrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+        document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-firstpage.html";
+  };
+    </script>
+</body>
+</html>

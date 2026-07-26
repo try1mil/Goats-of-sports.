@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<title>Alexa's Records</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+body, html {
+    background-color : rgb(92, 124, 196);
+}
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.competitions {
+    background-color:rgb(26,170,206);
+    border:1px solid rgb(26, 170, 206);
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name: competitions;
+    animation-fill-mode: forwards;
+
+}
+
+.img {
+    width:auto;
+    height:400px;
+    border: 10px solid white;
+    border-radius:20px;
+    margin-top:0px;
+}
+
+
+
+
+
+.medals {
+    background-color:rgb(26, 170, 206);
+    border:1px  rgb(26,170,206);
+    width:20px;
+    height:30px;
+    animation-duration:3s;
+    animation-name:medals;
+    animation-fill-mode:forwards;
+}
+
+@keyframes competitions {
+    0% {
+        transform : scale(1,1);
+    }
+    100% {
+        transform: scale(60,1);
+    }
+}
+
+
+
+@keyframes medals {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform:scale(20,1);
+    }
+}
+
+
+</style>
+
+<body>
+<div class = "cinzel-font">
+<div class = "fontdiner-swanky-regular">
+    <div>
+        <h1 style = "color:darkblue;">Competitions</h1>
+        <div class ="competitions"></div>
+        <p style = "color:darkblue;font-weight:bold;font-size:40px;">42</p>
+        <h1 style = "color:darkblue;">Medals</h1>
+        <div class = "medals"></div>
+        <p style = "color:darkblue;font-weight:bold;font-size:40px;">10</p>
+    </div>
+
+    <h1 style = "color:rgb(26, 170, 206);text-align:center;">Medals</h1>
+
+    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/79/fa/22/79fa227e05182ae86591043d9e621d56.jpg" 
+        class = "img">
+        <figcaption style = "color:rgb(26, 170, 206);text-align:center;margin-top:10px;font-weight:bold;">3 Gold Medals</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/1200x/95/09/bb/9509bb09ecef4d9fb5d7acdbfdbe0872.jpg" class = "img" style = "left:100px">
+        <figcaption style = "color:rgb(26, 170, 206);text-align: center;margin-top:10px;font-weight:bold">3 Silver Medals</figcaption>
+    </figure>
+
+    <figure>
+        <img src = "https://i.pinimg.com/736x/dc/2a/d9/dc2ad9e6fcf146e03de9e20026f64d80.jpg" class ="img">
+        <figcaption style = "color:rgb(26, 170, 206);text-align:center;margin-top:10px;font-weight:bold;">4 Bronze Medals</figcaption>
+    </figure>
+
+</div>
+<h3 style = "color:rgb(26, 170, 206);text-align:center;">It all adds up to 6 trophies in total.</h3>
+
+<span id = "a" style = "color:rgb(26, 170, 206);margin-left: 20px;margin-top:1000px;font-size:50px">&#8617;</span>
+
+</div>
+<script>
+   document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-firstpage.html";
+  };
+</script>
+</body>

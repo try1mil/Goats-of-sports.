@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<style>
+.centering {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 97vh;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    width: 840px; 
+}
+.frame {
+    transition: transform 0.5s;
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    position: relative;
+}
+
+.frame p {
+    padding:100px;
+    box-sizing:border-box;
+}
+
+
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+</style>
+<body>
+
+<div class = "cinzel-font">
+    <div class = "centering">
+        <div class = "layout">
+
+            <div class = "frame">
+                <p id = "a" style="background-color: rgb(150, 148, 255); color: white;width: 400px; height: 200px; border-radius: 20px;">Who is Alexa?</p>
+            </div>
+
+            <div class = "frame">
+                <p id = "b" style = "background-color: rgb(61, 59, 243); color: white;width: 400px; height: 200px; border-radius: 20px;">Her records</p>
+            </div>
+
+            <div class = "frame">
+                <p id = "c" style = "background-color: rgb(255, 41, 41); color: white; width: 400px; height: 200px; border-radius: 20px;">How good was she?</p>
+            </div>
+
+            <div class = "frame">
+               <p id = "d" style = "background-color: rgb(235, 234, 255); color: white;width: 400px; height: 200px; border-radius: 20px;">Timeline of her career</p>
+            </div>
+
+    
+        </div>
+    </div>
+
+    <span id = "e" style = "color:rgb(26, 170, 206);margin-left: 20px;margin-top:400px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+<script>
+     document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa.html";
+  };
+   document.getElementById("b").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-records.html";
+  };
+   document.getElementById("c").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-records2.html";
+  };
+   document.getElementById("d").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/alexa-timeline.html";
+  };
+   document.getElementById("e").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/goats.html";
+  };
+</script>
+</body>
