@@ -5,3 +5,5 @@ Lionel Messi (Football)
 Alexandra Trusova (Figureskating)
 Micheal Schumacher (Formula 1)
 Svetlana Khorkina (Gymnastics)
+
+no AI was used in the making of this project.
