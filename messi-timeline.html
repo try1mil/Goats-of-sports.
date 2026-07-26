@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Messi's career timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.media-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-layer.is-hidden {
+    display: none;
+}
+
+.fade-target {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.timeline-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 120px;
+}
+
+.timeline-arrow {
+    position: relative;
+    width: 1000px;
+    height: 6px;
+    background-color: rgb(10, 57, 110);
+    box-shadow: 0 0 10px rgb(10, 57, 110);
+}
+
+.timeline-arrow::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-top: 6px solid rgb(10, 57, 110);
+    border-right: 6px solid rgb(10, 57, 110);
+    transform: translateY(-50%) rotate(45deg);
+    animation: arrow-journey 14s ease-in-out 1 forwards;
+}
+
+@keyframes arrow-journey {
+    0%   { left: -5px; 
+        }
+    30%  { left: calc(25% - 15px); 
+    }
+    50%  { left: calc(50% - 15px); 
+    }
+    75%  { left: calc(75% - 15px); 
+    }
+    100% { left: calc(100% - 15px); 
+    }
+}
+
+.timeline-label {
+    position: absolute;
+    top: 15px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(184, 37, 37);
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.era-text-container {
+    position: absolute;
+    top: 68%;
+    width: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.era-description {
+    display: none;
+    max-width: 800px;
+    color: rgb(231, 231, 137);
+    margin-bottom:200px;
+}
+
+.bitcount-single-font {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+.era-description.is-active {
+    display: block;
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 50px;
+    color: rgb(231, 231, 137);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+<div class = "bitcount-single-font">
+    <video id="player" class="media-layer" autoplay muted playsinline src="messi1.mp4"></video>
+
+    <div class="timeline-container">
+        <div class="timeline-arrow">
+             <p class="timeline-label" style="left: 0%;">2004-2008</p>
+            <p class="timeline-label" style="left: 25%;">2009-2012</p>
+            <p class="timeline-label" style="left: 50%;">2013-2016</p>
+            <p class="timeline-label" style="left: 75%;">2017-2020</p>
+            <p class="timeline-label" style="left: 100%;">2021-present</p>
+        </div>
+    </div>
+
+
+    <div class="era-text-container">
+        <p class="era-description is-active" data-era="2004-2008">
+            Debut for Barcelona, wins Olympic gold with Argentina, wins U-20 World Cup with Argentina.
+        </p>
+        <p class="era-description" data-era="2009-2012">
+            Wins first Ballon d'Or and UCL, then wins 4 Ballon d'Ors in a row.
+        </p>
+        <p class="era-description" data-era="2013-2016">
+           Wins treble with Barcelona, reaches World Cup final and loses against Germany.
+        </p>
+        <p class="era-description" data-era="2017-2020">
+            Becomes Barcelona's all time top scorer, wins 6th Ballon d'Or.
+        </p>
+        <p class="era-description" data-era="2021-present">
+            Wins Copa America and World Cup with Argentina, joins PSG, wins 7th Ballon d'Or, joins Inter Miami and wins MLS Cup.
+        </p>
+    </div>
+</div>
+    <span class="back-btn" id="a">&#8617;</span>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const eras = [
+                { video: "messi1.mp4", era: "2004-2008" },
+                { video: "messi2.mp4", era: "2009-2012" },
+                { video: "messi3.mp4", era: "2013-2016" },
+                { video: "messi4.mp4", era: "2017-2020" },
+                { video: "messi5.mp4", era: "2021-present" }
+            ];
+
+            const videoPlayer = document.getElementById("player");
+            const descriptions = document.querySelectorAll(".era-description");
+
+            let currentIndex = 0;
+
+            function showEra(eraName) {
+                descriptions.forEach(el => {
+                    el.classList.toggle("is-active", el.dataset.era === eraName);
+                });
+            }
+
+            function advancePlaylist() {
+                currentIndex++;
+
+                if (currentIndex < eras.length) {
+                    const next = eras[currentIndex];
+                    videoPlayer.src = next.video;
+                    videoPlayer.play();
+                    showEra(next.era);
+                } else {
+                }
+            }
+
+            videoPlayer.addEventListener("ended", advancePlaylist);
+        });
+        document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-firstpage.html";
+  };
+    </script>
+</body>
+</html>

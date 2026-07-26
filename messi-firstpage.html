@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <script src="goats.js" ></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
+<style>
+.centering {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 97vh;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    width: 840px; 
+}
+.frame {
+    transition: transform 0.5s;
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    position: relative;
+}
+
+.frame p {
+    padding:100px;
+    box-sizing:border-box;
+}
+
+.bitcount-single-font {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+
+</style>
+<body>
+
+<div class = "bitcount-single-font">
+    <div class = "centering">
+        <div class = "layout">
+
+            <div id = "a" class = "frame">
+                <p style="background-color: rgb(0, 77, 152); color: white;width: 400px; height: 200px; border-radius: 20px;">Who is Messi?</p>
+            </div>
+
+            <div id = "b" class = "frame">
+                <p style = "background-color: rgb(165, 0, 68); color: white;width: 400px; height: 200px; border-radius: 20px;">His records</p>
+            </div>
+
+            <div id = "c" class = "frame">
+             <p style = "background-color: #F7B5CD; color: white; width: 400px; height: 200px; border-radius: 20px;"> How good was he?</p>
+            </div>
+
+            <div id = "d" class = "frame">
+                <p style = "background-color: #6CACE4; color: white;width: 400px; height: 200px; border-radius: 20px;">Timeline of his career</p>
+            </div>
+
+    
+        </div>
+    </div>
+        <span id = "e" style = "color:yellow;margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+</div>
+</body>
+<script>
+    document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi.html";
+  };
+
+  document.getElementById("b").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-records.html";
+  };
+
+  document.getElementById("c").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-records2.html";
+  };
+
+  document.getElementById("d").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-timeline.html";
+  };
+
+  document.getElementById("e").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/goats.html";
+  };
+</script>
+</html>

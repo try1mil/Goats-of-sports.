@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+<title>How good was Messi?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
+<style>
+body, html {
+    background-color: rgb(247, 247, 89);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.bitcount-single-font {
+    font-family: "Bitcount Single", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.frame {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgb(253, 253, 111);
+    color: rgb(72, 95, 226);
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(72, 95, 226);
+    transition: transform 0.2s;
+    font-weight:bold;
+    font-size:100px;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.span {
+    transition:transform 0.2s;
+    transform:scale(1)
+}
+
+.span:hover {
+    transform: scale(1.2);
+
+}      
+
+.slide {
+    text-align: center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="bitcount-single-font">
+        <p style="color:rgb(72, 95, 226); text-align:center; font-size:70px; font-weight:bold;">How good was Messi?</p>
+        
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="frame">
+                    <p>Growing up, Lionel Messi had growth hormone deficiency which limited his height to an average 5 feet 7 inches (1.70 meters) tall. However, that didn't hold him back from breaking the world's best defenses. The following quotations belong to some of the world's greatest defenders.</p>
+                    
+                    <p>"I am not ashamed to admit that in the games against Barcelona I spent a lot of the time just hoping he would take up positions as far away from me as possible." — Paul Scholes</p>
+                    
+                    <p>"Since the first time I saw him play I have always said he surprised me, and he has done every day since." — Sergio Ramos</p>
+                    
+                    <p>"Although he may not be human, it's good that Messi still thinks he is." "I am fortunate I never have to face Messi." — Javier Mascherano</p>
+                    
+                    <p>His ability to scare defenders and score goals despite his obvious genetic disadvantage is an impressive feat unique to only him in the football world.</p>
+                </div>
+
+                <div class="frame">
+                    <p>Messi is also known for being a one of a kind record breaker.</p>
+                    
+                    <p>He happens to hold 58 Guisness World Recors, the most out of any football player.</p>
+                    
+                    <p>The saying that he "has completed football" is no exhageration, Messi actually happens to have won every possible team and individual trophy, times within the leagues he has played in,some multiple times, making him one of football's most decorated players, which in itself is a record held by very few, and in modern times only him.</p>
+                    
+                    <p>His trophy collection unique only to him speaks louder than words, time, effort, takent, all in one.</p>
+                </div>
+
+                <div class="frame">
+                    <p>Messi is nothing short of a prodigy, not is he not just able to play in every position, but he also does it very well.</p>
+                    
+                    <p>This is reflected on the way he can carry entire teams by himself, especially his national team.</p>
+                    
+                    <p>He's an excellent playmaker and goal scorer, but perhaps the most impressive thing about him is how not only can he visualize goals and create big chances, but how he also has the skill that it takes to do so, despite genetic and physical factors, never has he ever been held back in the least from proving how good he is, 25 or 35, he still controls the ball as good as he controls the pitch.</p>
+                    
+                    <p>Such skill and significance cannot be faked, it can only be earned, and talent does not dismiss hard work.</p>
+              
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="arrow" id="nextarrow" style = "cursor: pointer;font-family:'BANGERS'">&#8250;</span>
+        </div>
+    </div>
+
+
+<span id = "a" style = "color:rgb(72, 95, 226);margin-left: 20px;margin-top:1000px;font-size:50px;cursor:pointer;">&#8617;</span>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('sliderTrack');
+        const arrow = document.getElementById('nextarrow');
+
+        arrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+        document.getElementById("a").onclick = function() {
+    window.location.href = "file:///C:/Users/MICROSOFT/OneDrive/Bureau/Goats%20of%20Sports/messi-firstpage.html";
+  };
+    </script>
+</body>
+</html>
